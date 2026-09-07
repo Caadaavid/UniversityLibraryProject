@@ -21,6 +21,7 @@ public class main {
             System.out.println("8. Mostrar estadiscticas e información");
             System.out.println("0. Salir");
             choice = teclado.nextInt();
+            teclado.nextLine();
 
             switch (choice){
                 case 1:
@@ -33,6 +34,7 @@ public class main {
 
                     System.out.println("Año de publicacion: ");
                     int publicado = teclado.nextInt();
+                    teclado.nextLine();
 
                     System.out.println("Autor: ");
                     String autor = teclado.nextLine();
@@ -53,9 +55,11 @@ public class main {
 
                     System.out.println("Año de publicacion: ");
                     publicado = teclado.nextInt();
+                    teclado.nextLine();
 
                     System.out.println("Edicion: ");
                     int numeroEdicion = teclado.nextInt();
+                    teclado.nextLine();
                     vprestado = 0;
 
                     Revista nuevaRevista = new Revista(codigo, titulo, publicado, numeroEdicion, vprestado);
@@ -73,6 +77,7 @@ public class main {
 
                     System.out.println("Año de publicacion: ");
                     publicado = teclado.nextInt();
+                    teclado.nextLine();
 
                     System.out.println("Autor: ");
                     autor = teclado.nextLine();
@@ -100,7 +105,7 @@ public class main {
 
                     for (int i = 0; i < biblioteca.size(); i++){
                         MaterialBibliografico m = biblioteca.get(i);
-                        if(m.getCodigo() == codigoBuscar){
+                        if(m.getCodigo().equals(codigoBuscar)){
                             if(m instanceof Prestable){
                                 ((Prestable) m).prestar();
                             } else {
@@ -122,7 +127,7 @@ public class main {
 
                     for (int i = 0; i < biblioteca.size(); i++){
                         MaterialBibliografico m = biblioteca.get(i);
-                        if(m.getCodigo() == codigoDevolver){
+                        if(m.getCodigo().equals(codigoDevolver)){
                             if(m instanceof Prestable){
                                 ((Prestable) m).devolver();
                             } else {
@@ -145,7 +150,7 @@ public class main {
                     for (int i = 0; i < biblioteca.size(); i++){
                         MaterialBibliografico m = biblioteca.get(i);
 
-                        if(m.getCodigo() == codigoBuscar){
+                        if(m.getCodigo().equals(codigoBuscar)){
                             if (m instanceof Descargable){
                                 ((Descargable) m).descargar();
                             } else {

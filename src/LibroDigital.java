@@ -19,7 +19,7 @@ public class LibroDigital extends MaterialBibliografico implements Descargable {
     }
 
     public int getVDescargado(){
-        return vdescargado:
+        return vdescargado;
     }
 
     public void mostrarInfo(){
