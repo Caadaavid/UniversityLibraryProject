@@ -1,4 +1,4 @@
-public class LibroDigital extends MaterialBibliografico {
+public class LibroDigital extends MaterialBibliografico implements Descargable {
     private String autor;
     private double size;
 
@@ -22,5 +22,10 @@ public class LibroDigital extends MaterialBibliografico {
         }else{
             System.out.println("Libro: "+getTitulo()+" con identificador "+getCodigo()+" escrito por: "+getAutor()+" sin año de publicación definida"+" tamaño del archivo: "+getSize());
         }
+    }
+
+    @Override
+    public void descargar(){
+        System.out.printf("Libro de "+getSize()+" MB descargado con exito");
     }
 }
