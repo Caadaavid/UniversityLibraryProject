@@ -7,4 +7,20 @@ public class LibroDigital extends MaterialBibliografico {
         this.autor = autor;
         this.size = size;
     }
+
+    public String getAutor(){
+        return autor;
+    }
+
+    public double getSize(){
+        return size;
+    }
+
+    public void mostrarInfo(){
+        if (getPublicado() != 0){
+            System.out.println("Libro: "+getTitulo()+" con identificador "+getCodigo()+" escrito por: "+getAutor()+" publicado en el año: "+getPublicado()+" tamaño del archivo: "+getSize());
+        }else{
+            System.out.println("Libro: "+getTitulo()+" con identificador "+getCodigo()+" escrito por: "+getAutor()+" sin año de publicación definida"+" tamaño del archivo: "+getSize());
+        }
+    }
 }

@@ -24,15 +24,15 @@ public abstract class MaterialBibliografico {
         contadorMateriales++;
     }
 
-    public String getCodigo() {
+    public String getCodigo(){
         return codigo;
     }
 
-    public String getTitulo() {
+    public String getTitulo(){
         return titulo;
     }
 
-    public int getPublicado() {
+    public int getPublicado(){
         return publicado;
     }
 
