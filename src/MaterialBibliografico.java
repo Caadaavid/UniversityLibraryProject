@@ -24,6 +24,8 @@ public abstract class MaterialBibliografico {
         contadorMateriales++;
     }
 
+    public abstract void mostrarInfo();
+
     public String getCodigo(){
         return codigo;
     }
