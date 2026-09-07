@@ -1,4 +1,4 @@
-public class MaterialBibliografico {
+public abstract class MaterialBibliografico {
     private String codigo;
     private String titulo;
     private int publicado;
